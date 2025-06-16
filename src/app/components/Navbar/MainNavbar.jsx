@@ -42,7 +42,7 @@ const MainNavbar = ({ onMenuClick, showMenuButton }) => {
     return (
         <nav className="bg-background shadow-md w-full z-50 border-b border-border transition-colors">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-14">
                     {/* Left: Hamburger for mobile + Branding */}
                     <div className="flex items-center">
                         {showMenuButton && (
@@ -82,12 +82,12 @@ const MainNavbar = ({ onMenuClick, showMenuButton }) => {
                         </div>
                         <FiBell className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Alarm" />
                         <FiUser className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Profile" />
-                        <FiFilter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Filter" />
-                        <span className="relative">
+                        {/* <FiFilter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Filter" /> */}
+                        {/* <span className="relative">
                             <FiHelpCircle className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Help" />
                             <span className="absolute top-0 right-0 block w-2 h-2 bg-primary rounded-full"></span>
-                        </span>
-                        <FiMonitor className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Screen" />
+                        </span> */}
+                        {/* <FiMonitor className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer" title="Screen" /> */}
                         <button
                             className="ml-2 p-2 rounded hover:bg-accent transition"
                             onClick={() => setDark(d => !d)}
