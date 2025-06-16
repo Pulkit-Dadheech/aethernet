@@ -166,8 +166,8 @@ export default function Home() {
         <div className="w-20 md:w-56 flex-shrink-0">
           <Sidebar
             titleName="AetherNet"
-            activeSectionList={["dashboard", "suggestions", "multiple"]}
-            sectionNames={["Dashboard", "AI Suggestions","Multiple Place Analysis"]}
+            activeSectionList={["dashboard", "suggestions", "multiple","map"]}
+            sectionNames={["Dashboard", "AI Suggestions","Multiple Place Analysis","Pollution Map"]}
             LogoComponents={[FiGlobe, FiWind, FiCloud, FiSettings]}
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
@@ -207,19 +207,15 @@ export default function Home() {
             </div>
           )}
 
-          {/* Network Analysis Section */}
-          {activeSection === "network" && (
-            loadingNetworkData ? (
-              <div className="flex flex-col items-center justify-center min-h-[200px]">
-                <ClipLoader color="#6366f1" size={64} speedMultiplier={1.2} />
-                <span className="mt-4 text-lg text-primary font-semibold animate-pulse">
-                  Loading network data...
-                </span>
-              </div>
-            ) : (
-              <NetworkComponent data={networkData} />
-            )
+          {/* Pollution Map Section */}
+          {activeSection === "map" && (
+            <div className="flex-1 flex items-center justify-center p-8">
+              <h2 className="text-2xl font-semibold text-center">Pollution Map Coming Soon!</h2>
+            </div>
           )}
+
+
+          {}
 
           {/* News Section */}
           {/* You can add more sections here, e.g.:
